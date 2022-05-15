@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackShineLogin</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/nav2.css"/>
+    <link rel="stylesheet" href="/download.css"/>
+
+    <!-- w3school -->
+    <script>
+      function magnify(imgID, zoom) {
+        var img, glass, w, h, bw;
+        img = document.getElementById(imgID);
+        
+        glass = document.createElement("DIV");
+        glass.setAttribute("class", "img-magnifier-glass");
+        
+        img.parentElement.insertBefore(glass, img);
+       
+        glass.style.backgroundImage = "url('" + img.src + "')";
+        glass.style.backgroundRepeat = "no-repeat";
+        glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+        bw = 3;
+        w = glass.offsetWidth / 2;
+        h = glass.offsetHeight / 2;
+        
+        glass.addEventListener("mousemove", moveMagnifier);
+        img.addEventListener("mousemove", moveMagnifier);
+        
+        glass.addEventListener("touchmove", moveMagnifier);
+        img.addEventListener("touchmove", moveMagnifier);
+        function moveMagnifier(e) {
+          var pos, x, y;
+          
+          e.preventDefault();
+         
+          pos = getCursorPos(e);
+          x = pos.x;
+          y = pos.y;
+          
+          if (x > img.width - (w / zoom)) {x = img.width - (w / zoom);}
+          if (x < w / zoom) {x = w / zoom;}
+          if (y > img.height - (h / zoom)) {y = img.height - (h / zoom);}
+          if (y < h / zoom) {y = h / zoom;}
+          
+          glass.style.left = (x - w) + "px";
+          glass.style.top = (y - h) + "px";
+          
+          glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+        }
+        function getCursorPos(e) {
+          var a, x = 0, y = 0;
+          e = e || window.event;
+          
+          a = img.getBoundingClientRect();
+          
+          x = e.pageX - a.left;
+          y = e.pageY - a.top;
+          
+          x = x - window.pageXOffset;
+          y = y - window.pageYOffset;
+          return {x : x, y : y};
+        }
+      }
+      </script>
+
+</head>
+
+<nav>
+  <input type="checkbox" id="check">
+  <label for="check" class="checkbtn">
+    <i class="fas fa-bars"></i>
+  </label>
+  <a href="/Index.ejs"><img src="/รูปภาพ/LOGO2.png" class="logo"/></a>
+  <div class="BGnav"></div>
+  <ul>
+    <li class="item"><a href="/news.ejs">MANUAL</a></li>
+    <li class="item"><a href="/download.ejs">Gameplay</a></li>
+    <li class="item"><a href="/community.ejs">Community</a></li>
+    <li class="item button"><a href="/logout" class="btn2">LogOut</a></li>
+  </ul>
+</nav>
+
+    <div class="BGIMG"></div>
+    <div class="BGIMG2"></div>
+
+      <div class="table-menu">
+        <div class="content-index">
+           
+           <div class="inimg">
+             
+            <div class="Download">
+              <img src="/รูปภาพ/LOGO2.png" class="logo2" style="width: 50%">
+              <a href="https://blackshine-demo.web.app/" class="btn">Click to play</a>
+           </div>
+
+            <div class="img2">
+              <h2>Game Play</h2>
+              <div class="slideshow-container">
+
+                     
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 4</div>
+                  <video autoplay muted loop style="width:100%">
+                    <source src="/รูปภาพ/Gameplay.mp4" type="video/mp4">
+                  </video>
+                  <div class="text">Video Gameplay</div>
+                </div>
+                   
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 4</div>
+                  <img src="/รูปภาพ/gameplay1.png" style="width:100%">
+                  <div class="text">Gameplay</div>
+                </div>
+              
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 4</div>
+                  <img src="/รูปภาพ/gameplay2.png" style="width:100%">
+                  <div class="text">Gameplay</div>
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="numbertext">4 / 4</div>
+                  <img src="/รูปภาพ/gameplay3.png" style="width:100%">
+                  <div class="text">Gameplay</div>
+                </div>
+              
+                
+                
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
+              <br>
+              
+              
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+              </div>
+          </div>
+           </div>
+
+           <div class="img1">
+            <h2>Map Model</h2>
+            <br>
+            <div class="img-magnifier-container">
+              <img id="myimage" src="/รูปภาพ/map.png" >
+            </div>
+            <script>
+              
+              magnify("myimage", 3);
+              </script>
+          </div>
+          <footer>
+            <p>© 2021 BlackShine the Series</p>
+          </footer>
+        </div>
+      </div>
+      
+      <script>
+        let slideIndex = 1;
+        
+        showSlides(slideIndex);
+
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        }
+      </script>
+
+
+  </body>
+</html>

@@ -1,0 +1,179 @@
+*{ 
+    margin: 0;  
+    padding: 0;
+}
+
+
+h1{ 
+    color: rgb(255, 255, 255); 
+    font-size: 72px; 
+    text-transform: uppercase; 
+}
+
+h2{
+    color: rgb(255, 255, 255);
+    font-size: 40px;  
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase; 
+
+}
+
+h4{ 
+    color: rgb(255, 255, 255);
+    font-size: 64px;  
+}
+
+.table-menu p{
+    font-weight: bolder;
+    color: #9c3100;
+    font-weight: normal;
+    font-size: 25px;
+}
+
+th{
+    width: 30%; 
+    height: 30%;
+    vertical-align: top;
+}
+
+.imgBG{
+    height: 300px;
+    width: 100%;
+    position: relative;
+}
+
+#myImage1{
+    position: fixed;
+    top: 145px;
+    width: 220px;
+    z-index: -1; 
+}
+
+#myImage{
+    margin: 30px;
+}
+
+.img .button{
+    margin: 40px;
+}
+button{
+    margin: 5px;
+}
+
+.BGIMG{
+    width: 100%;  
+    height: 100vh;  
+    background-size: cover;  
+    background-image:url(/รูปภาพ/BG.jpg);
+    background-position: center center;
+    filter: blur(1.5px);
+    position: relative;
+}
+
+.table-menu{
+    font-family: Arial, Helvetica, sans-serif;  
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
+.content-index{ 
+    height: 100%; 
+    display: flex; 
+    align-items: center;
+    justify-content:center; 
+    flex-direction: column; 
+    margin: 40px 40px;
+    transform: translateY(20%); 
+    padding: 40px 30px;
+    border-radius: 50px;
+    background-color:rgba(0, 0, 0, 0.511);
+}
+
+.btn{
+    background-color: #ffc000; 
+    color: #9c3100; 
+    text-decoration: none; 
+    border: 2px solid transparent; 
+    font-weight: bolder; 
+    text-transform: uppercase; 
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform 0.3s;
+    margin: 7px 10px;
+}
+
+.btn:hover{
+    transform: scale(1.2);
+    background-color: #ff5100; 
+    box-shadow: 0 0 5px #ff5100, 
+                0 0 20px #ff5100,
+                0 0 50px #ff5100;
+}
+
+.Story{
+    background-color: #ffc000;
+    padding: 20px 20px;
+    border-radius: 30px;
+}
+
+.Manual{
+    background-color: #ffc000;
+    padding: 20px 20px;
+    border-radius: 30px;
+    
+}
+
+nav{
+    position: absolute;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+footer{
+    position:relative;
+    background-color: #333333;
+    color: aliceblue;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;  
+    padding: 25px;
+    text-transform: lowercase;
+    bottom: 0;
+}
+
+.control{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+@media (max-width: 921px) {
+
+    .content-index{
+        margin-top: 30%;
+    }
+
+    tr{
+        flex-direction: column; 
+        display: flex; 
+        align-items: center;
+        justify-content:center; 
+    }
+
+    th{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #myImage1{
+        top: 470px;
+    }
+}

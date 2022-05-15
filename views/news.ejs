@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackShineLogin</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/nav2.css"/>
+    <link rel="stylesheet" href="/news.css"/>
+</head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <a href="/Index.ejs"><img src="/รูปภาพ/LOGO2.png" class="logo"/></a>
+      <div class="BGnav"></div>
+      <ul>
+        <li class="item"></li>
+        <li class="item"><a href="/news.ejs">MANUAL</a></li>
+        <li class="item"><a href="/download.ejs">Gameplay</a></li>
+        <li class="item"><a href="/community.ejs">Community</a></li>
+        <li class="item button"><a href="/logout" class="btn2">LogOut</a></li>
+      </ul>
+    </nav>
+
+    <div class="BGIMG"></div>
+
+      <div class="table-menu">
+        <div class="content-index">
+        <table>
+            <tr>
+                <th class="Story">
+                    <h1>Story</h1>
+                    <br>
+                    <p>
+                        ในปี 1990 ได้มีชายหญิงคู่หนึ่งเป็นนักพฤษศาสตร์ ได้เดินทางไปยังป่าอะเมซอน เพื่อตามหาต้นไม้ชนิดใหม่และนำกลับมาทำการวิจัย 
+                        แต่ได้เกิดเหตุการณ์ระหว่างการเดินทาง มีพายุก้อนใหญ่ได้ดูดพวกเค้าสองคนขึ้นไป ทำให้พวกเค้าหมดสติไป 
+                        หลังจากตื่นขึ้นมาพวกเค้าก็ได้เห็นเกาะมหัศจรรย์อยู่ตรงหน้า และพวกเค้าก็ต้องหาทางออกจากเกาะแห่งนี้
+                    </p>
+                </th>
+
+                <th class="img">
+                  <h2>Animation</h2>
+                    <img id="myImage1" src="/รูปภาพ/TX Tileset Grass.png" />
+                    <img id="myImage" src="/รูปภาพ/idle.gif" style="width: 180px" />
+                  
+                    
+                  <div class="button">
+                    <button class="btn" onclick="document.getElementById('myImage').src='/รูปภาพ/idle.gif'">Idle</button>
+                    <button class="btn" onclick="document.getElementById('myImage').src='/รูปภาพ/walk.gif'">Walk</button>
+                    <button class="btn" onclick="document.getElementById('myImage').src='/รูปภาพ/attack.gif'">Attack</button>
+                  </div>
+                </th>
+
+                <th class="Manual">
+                  <h1>Manual</h1>
+                    <div class="control">
+                        <img src="/รูปภาพ/wasd.png" alt="Control" style="width: 50%;">
+                        <img src="/รูปภาพ/Lclick.png" alt="Attack" style="width: 50%;">
+                    </div>
+                    <br>
+                    <div class="work"><p>การควบคุมและการโจมตี</p></div>
+                </th>
+            </tr>
+        </table>
+        </div>
+      </div>
+    
+      <footer>
+        <p>© 2021 BlackShine the Series</p>
+      </footer>
+
+  </body>
+</html>

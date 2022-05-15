@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>BlackShineLogin</title>
+    <link rel="stylesheet" href="/Login.css"/>
+</head>
+
+<body>
+  <img src="/รูปภาพ/LOGO2.png" class="logo"/>
+    <div class="BGIMG"></div>
+      <div class="table-menu">
+            <div class="BGcontainer">
+                <div class="container">
+                    <h2>Login</h2>
+
+                    <form action="/Login" method="POST">
+                      <input name="user_email" id="_email" class="textbox" type="text" placeholder="Email" rnodeequired>
+                      <input name="user_pass" id="_pass" class="textbox" type="password" placeholder="Password" required>
+                      <% if (locals.login_errors) { 
+                        login_errors.forEach(function(error_msg){ %>
+                        <div class="alert"><%= error_msg %></div>
+                      <% });
+                      } %>
+                      <button type="submit" class="btn">Login</button>
+                    </form>
+                    <a href="/register.ejs">register</a>
+                </div>
+            </div>
+        </div>
+        <footer>
+          <p>© 2021 BlackShine the Series</p>
+        </footer>
+</body>
+</html>

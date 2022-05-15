@@ -1,0 +1,115 @@
+*{ 
+    margin: 0;  
+    padding: 0;
+}
+
+.BGIMG{
+    width: 100%;  
+    height: 100vh;  
+    background-size: cover;  
+    background-image:url(/รูปภาพ/BG.jpg);
+    background-position: center center;
+    filter: blur(1px);
+    position: relative;
+}
+
+.table-menu{
+    font-family: Arial, Helvetica, sans-serif;  
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+.BGcontent{
+    padding: 20px 20px;
+    margin: 0px 25px;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.63);
+    transform: translateY(-2%); 
+}
+.content01{
+    background-color: antiquewhite;
+    border-radius: 30px;
+    padding: 30px 0;
+    margin: 10px 20px;
+}
+
+.content{ 
+    color: blueviolet;
+    height: 90%; 
+    display: flex; 
+    align-items: center;
+    justify-content:center; 
+    flex-direction: column; 
+    padding: 30px 30px;
+    margin: 20px 20px;
+    border-radius: 30px;
+    text-align: center;
+    background-color: #ffc000;
+}
+
+.content a img:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s;
+}
+
+.content-contact a img{
+    cursor: pointer; 
+    width: 5%; 
+    padding: 5px 5px;
+    transition: transform 0.3s;
+}
+
+.content-contact a img:hover{
+    transform: scale(1.2);
+}
+
+.content p a{
+    text-decoration: none;
+    color: blueviolet;
+}
+
+.content h1{
+    margin: 10px 0;
+    padding: 15px 14px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    background-color: antiquewhite;
+}
+
+.btn{
+    background-color: blueviolet; 
+    color: aliceblue; 
+    text-decoration: none; 
+    border: 2px solid transparent; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform 0.3s;
+    margin: 20px 10px;
+}
+
+.btn:hover{
+    transform: scale(1.2);
+    background-color: #ff004c; 
+    box-shadow: 0 0 5px #ff78a0, 
+                0 0 20px #ff004c;
+}
+nav{
+    position: absolute;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+}
+
+footer{
+    background-color: #333333;
+    color: aliceblue;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;  
+    padding: 25px;
+    text-transform: lowercase;
+    bottom: 0;
+}
